@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayLight">
+
+    <LinearLayout
+        android:id="@+id/parentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nestedScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/nav_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivProductPhoto"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_300dp"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/ic_launcher"
+                            android:visibility="visible" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="horizontal"
+                            android:paddingBottom="@dimen/dimen_16dp">
+
+                            <TextView
+                                android:id="@+id/tvPoductName"
+                                style="@style/TextViewStyleHard"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/dimen_16dp"
+                                android:text="Ayam Berkah Potong M"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tvProductPrice"
+                                style="@style/TextViewStyleHard"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dimen_16dp"
+                                android:layout_marginTop="@dimen/dimen_8dp"
+                                android:text="Rp.58.000"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tvPoductName" />
+
+                            <TextView
+                                android:id="@+id/tvWeightProduct"
+                                style="@style/TextViewStyleMedium.Gray"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginStart="@dimen/dimen_16dp"
+                                android:gravity="start"
+                                android:text="/ 1 Ekor (0.7-0.8 kg)"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tvProductPrice" />
+
+                            <LinearLayout
+                                android:id="@+id/lnStock"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="@dimen/dimen_16dp"
+                                android:background="@drawable/textbox_style_no_bg_green"
+                                app:layout_constraintBottom_toBottomOf="@+id/tvWeightProduct"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/tvWeightProduct">
+
+                                <TextView
+                                    android:id="@+id/tvStock"
+                                    style="@style/TextViewStyleNormal.Accent"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Stok 52"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_16dp"
+                            android:background="@color/white"
+                            android:paddingBottom="@dimen/dimen_16dp">
+
+
+                            <TextView
+                                android:id="@+id/tvFarm"
+                                style="@style/TextViewStyleNormal.Gray"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/dimen_16dp"
+                                android:text="Petani"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tvFarmName"
+                                style="@style/TextViewStyleHard"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dimen_16dp"
+                                android:layout_marginTop="@dimen/dimen_8dp"
+                                android:layout_marginEnd="@dimen/dimen_16dp"
+                                android:text="Berkah Chicken"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tvFarm" />
+
+                            <TextView
+                                android:id="@+id/tvFarmLocation"
+                                style="@style/TextViewStyleSoft_14"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginStart="@dimen/dimen_16dp"
+                                android:layout_marginTop="@dimen/dimen_8dp"
+                                android:layout_marginEnd="@dimen/dimen_16dp"
+                                android:gravity="start"
+                                android:text="Kuningan"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tvFarmName" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_16dp"
+                            android:background="@color/white"
+                            android:paddingBottom="@dimen/dimen_16dp">
+
+                            <LinearLayout
+                                android:id="@+id/lnGrade"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <TextView
+                                    android:id="@+id/tvGradeTitle"
+                                    style="@style/TextViewStyleHard"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/dimen_16dp"
+                                    android:text="Tingkat Keorganisan"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <LinearLayout
+                                    android:id="@+id/lnGrades"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/dimen_16dp"
+                                    android:layout_marginEnd="@dimen/dimen_16dp"
+                                    android:background="@drawable/textbox_style_blueopacity"
+                                    android:orientation="vertical"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/tvGradeTitle">
+
+                                    <TextView
+                                        android:id="@+id/tvGrade"
+                                        style="@style/TextViewStyleNormal.Blue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginStart="@dimen/dimen_16dp"
+                                        android:layout_marginEnd="@dimen/dimen_16dp"
+                                        android:text="Berkah Chicken" />
+
+                                </LinearLayout>
+
+
+                                <TextView
+                                    android:id="@+id/tvDescGrade"
+                                    style="@style/TextViewStyleSoft_14"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_marginStart="@dimen/dimen_16dp"
+                                    android:layout_marginTop="@dimen/dimen_8dp"
+                                    android:layout_marginEnd="@dimen/dimen_16dp"
+                                    android:gravity="start"
+                                    android:text="Description"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/lnGrades" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lnLevel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_18dp"
+                                android:orientation="vertical"
+                                app:layout_constraintTop_toBottomOf="@+id/lnGrade">
+
+                                <TextView
+                                    android:id="@+id/tvProductLevel"
+                                    style="@style/TextViewStyleHard"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/dimen_16dp"
+                                    android:text="Tingkat produk &amp; manfaatnya"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/tvDescGrade" />
+
+
+                                <TextView
+                                    android:id="@+id/tvDescLevel"
+                                    style="@style/TextViewStyleSoft_14"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_marginStart="@dimen/dimen_16dp"
+                                    android:layout_marginEnd="@dimen/dimen_16dp"
+                                    android:gravity="start"
+                                    android:text="Description"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/tvProductLevel" />
+
+                            </LinearLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </LinearLayout>
+
+                    <include
+                        layout="@layout/product_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_16dp"
+                        android:clipToPadding="false"
+                        android:padding="@dimen/dimen_16dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.core.widget.NestedScrollView>
+
+            <LinearLayout
+                android:id="@+id/nav_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <Button
+                    android:id="@+id/buttonBuy"
+                    style="@style/TextViewStyleNormal.White"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dimen_16dp"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:backgroundTint="@color/colorAccent2"
+                    android:gravity="center"
+                    android:text="Beli"
+                    android:textAllCaps="false"
+                    app:layout_constraintVertical_bias="1.0" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+    <include layout="@layout/bottomsheet_buy"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

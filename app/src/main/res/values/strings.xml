@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Kecipirtest</string>
+    <string name="title_home">Home</string>
+    <string name="title_pesanann">Pesanan</string>
+    <string name="title_chat">Chat</string>
+    <string name="please_check_your_connection">Please check your connection</string>
+    <string name="no_data">No data</string>
+    <string name="search">Cari Sayur Organik</string>
+    <string name="delivery_area">Area Pengiriman</string>
+    <string name="area">Area</string>
+    <string name="promo">Promo</string>
+    <string name="produk_terlaris">Produk Terlaris</string>
+    <string name="semua_produk">Semua Produk</string>
+    <string name="favoritku">Favoritku</string>
+    <string name="delivery_date">Tanggal Pengiriman</string>
+    <string name="popular_product">Produk Terlaris</string>
+    <string name="my_favourite">Favoritku</string>
+    <string name="urutkan">Urutkan</string>
+    <string name="semua">Semua</string>
+    <string name="pilih_grade">Pilih Grade</string>
+    <string name="pembayaran">Pesanan dan Pembayaran</string>
+    <string name="title_help">Bantuan</string>
+    <string name="title_account">Profile</string>
+</resources>
